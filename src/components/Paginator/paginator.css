@@ -1,0 +1,49 @@
+.paginator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.solInput {
+  border-bottom: 1px solid #a63526;
+  -webkit-box-shadow: 0 1px 0 0 #a66426;
+  box-shadow: 0 1px 0 0 #a64a26;
+}
+
+.solButton {
+  margin: 0px 10px 0px 10px;
+  padding: 5px 30px 5px 30px;
+  background: linear-gradient(
+    262deg,
+    rgba(0, 29, 60, 1) 0%,
+    rgba(62, 89, 119, 1) 100%
+  );
+  border: 0.2px solid black;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.solButton:active {
+  transform: scale(1.1);
+}
+.error {
+  margin-top: -10px;
+  color: rgb(179, 0, 0);
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #392750;
+  -webkit-box-shadow: 0 1px 0 0 #392750;
+  box-shadow: 0 1px 0 0 #392750;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: white;
+}
