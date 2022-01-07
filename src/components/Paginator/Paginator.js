@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./paginator.css";
-import { TextInput, Button } from "react-materialize";
+import { TextInput } from "react-materialize";
 
 const Paginator = ({
   manifest,
