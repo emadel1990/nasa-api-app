@@ -18,6 +18,7 @@ const Paginator = ({
 
   useEffect(() => {
     debouncePageChange(counterSol);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counterSol]);
 
   const minSol = () => {
