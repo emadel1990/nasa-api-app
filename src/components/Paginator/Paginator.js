@@ -23,12 +23,14 @@ const Paginator = ({
 
   const minSol = () => {
     if (counterSol > 0) {
-      setCounterSol((max) => max - 1);
+      const newsol = counterSol - 1;
+      setCounterSol(newsol);
     }
   };
   const sumSol = () => {
     if (counterSol <= maxSol) {
-      setCounterSol((max) => max + 1);
+      const newsol = counterSol + 1;
+      setCounterSol(newsol);
     }
   };
 
