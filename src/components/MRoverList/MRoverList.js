@@ -86,6 +86,7 @@ const MRoverList = ({
       <RoverInfo manifest={manifest} />
 
       <Paginator
+        sol={sol}
         manifest={manifest}
         pageSolComponent={pageSolComponent}
         debouncePageChange={debouncePageChange}

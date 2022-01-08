@@ -3,6 +3,7 @@ import "./paginator.css";
 import { TextInput } from "react-materialize";
 
 const Paginator = ({
+  sol,
   manifest,
   pageSolComponent,
   debouncePageChange,
@@ -25,20 +26,23 @@ const Paginator = ({
     if (counterSol > 0) {
       const newsol = counterSol - 1;
       setCounterSol(newsol);
+      return;
     }
   };
   const sumSol = () => {
+    console.log(counterSol);
     if (counterSol <= maxSol) {
       const newsol = counterSol + 1;
       setCounterSol(newsol);
+      return;
     }
   };
 
   const handleSolSubmit = (e) => {
     e.preventDefault();
     if (e.target[0].value <= maxSol) {
-      debouncePageChange(e.target[0].value);
-      setCounterSol(e.target[0].value);
+      debouncePageChange(parseInt(e.target[0].value));
+      setCounterSol(parseInt(e.target[0].value));
       e.target[0].value = "";
       setErrorSol(false);
     } else {
@@ -48,7 +52,7 @@ const Paginator = ({
   return (
     <div className="paginator">
       <div className="sol-information">
-        <h1>Sol {pageSolComponent}</h1>
+        <h1>Sol {counterSol}</h1>
       </div>
       <form onSubmit={handleSolSubmit}>
         <TextInput
